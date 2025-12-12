@@ -10,4 +10,5 @@ spec:
   containers:
   - name: nginx
     image: navomika18/debug:v1
+    imagepullpolicy: always
    
