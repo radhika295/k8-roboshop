@@ -26,7 +26,7 @@ spec:
     spec:
       containers: 
       - name: nginx
-        image: navomika18/mongodb
+        image: navomika18/mongodb:v1
         readinessProbe:
           tcpSocket:
             port: 27017
