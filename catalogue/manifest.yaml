@@ -29,12 +29,12 @@ spec:
         image: navomika18/catalogue:v1
         readinessProbe:
           tcpSocket:
-            port: 27017
+            port: 8080
           initialDelaySeconds: 10
           periodSeconds: 10
         livenessProbe:
           tcpSocket:
-            port: 27017
+            port: 8080
           initialDelaySeconds: 5
           periodSeconds: 5
 ---
