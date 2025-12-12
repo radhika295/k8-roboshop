@@ -1,0 +1,30 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+  name: mongodb
+  namespace: roboshop
+  # these are replica set labels
+  labels:
+    component: mongodb
+    project: robosop
+    tier: db
+spec:
+  replicas: 1
+  selector:
+    # these labesl are used to select pods
+    matchLabels:
+      component: mongodb
+      project: robosop
+      tier: db
+#POD definition
+  template:
+    metadata: 
+      labels:
+        component: mongodb
+        project: robosop
+        tier: db
+    spec:
+      containers: 
+      - name: nginx
+        image: navomika18/mongodb
+
