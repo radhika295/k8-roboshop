@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: catalogue
+  namespace: roboshop
 data: 
   MONGO: "true"
   MONGO_URL: "mongodb://mongodb:27017/catalogue"
@@ -35,7 +36,7 @@ spec:
       containers: 
       - name: nginx
         image: navomika18/catalogue:v1
-        imagePullPolicy: "Always"
+        imagePullPolicy: Always"
         envFrom:
         - configMapRef:
             name: catalogue
